@@ -1,0 +1,97 @@
+/* .advantages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    margin: 0 auto;
+    width: 90%;
+}
+.advantages h1{
+        color: #242D31;
+        font-weight: 700;
+        font-size: 4rem;
+        border-left: 1rem solid #E02F2F;
+        padding: 0 3rem;
+       
+    }
+    .bottom{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        @include screen450{
+            flex-direction: column;
+        }
+        .left{
+            display: flex;
+            justify-content: space-evenly;
+            box-shadow: 4px 4px 42px rgba(0, 0, 0, 0.09);
+            border-radius: 1rem;
+            padding: 4rem 2rem;
+            @include screen450{
+                padding:3rem;
+            }
+            .img{
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 70%;
+                }
+            }
+            .text{
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 2rem;
+                h3{
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color:  #313131;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+
+
+            }
+        }
+        .right{
+            display: flex;
+            justify-content: space-evenly;
+            box-shadow: 4px 4px 42px rgba(0, 0, 0, 0.09);
+            border-radius: 1rem;
+            padding: 4rem 2rem;
+            @include screen450{
+                padding:3rem;
+            }
+            .img{
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 70%;
+                }
+            }
+            .text{
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 2rem;
+                h3{
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color:  #313131;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+
+
+            }
+        }
+    }
+} */
