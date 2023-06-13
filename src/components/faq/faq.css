@@ -1,0 +1,48 @@
+.faq{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 50px;
+}
+.faq h1{
+  color: #242D31;
+  font-weight: 700;
+  font-size: 32px;
+  border-left: 0.5rem solid #E02F2F;
+  padding: 0 1.5rem;
+}
+.faq .bottom{
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+.faq .bottom .left{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.faq .bottom .left .ques{
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.faq .bottom .left .ques p{
+  color:  #495057;
+}
+.faq .bottom .left .ques ruby-span: {
+  color: #191919
+}
+.faq .bottom .right{
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.faq .bottom .right img{
+  width: 70%;
+}
