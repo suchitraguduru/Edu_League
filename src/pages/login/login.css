@@ -103,6 +103,9 @@
   cursor: pointer;
   color: #E02F2F;
 }
+.login .container .right form p span{
+  color:#E02F2F;
+}
 .login .container .right .bottom{
   cursor: pointer;
   margin-top: 1rem;

@@ -18,7 +18,7 @@ const Login = () => {
           <div className="back">{"<"}</div>
           <span>Home</span>
           <div className="forward">{">"}</div>
-          <span>Sign Up</span>
+          <span>Login</span>
         </div>
         <div className="bottom">
           <h1>Welcome Back!</h1>
@@ -47,7 +47,7 @@ const Login = () => {
         </form>
       <div className="bottom">
       <span>Or</span>
-        <span>Sign in with</span>
+        <span>Sign up with</span>
         <div className="social">
           <img src={ apple} alt="" />
           <img src={ google} alt="" />
