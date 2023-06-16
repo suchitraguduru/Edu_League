@@ -3,8 +3,9 @@ import "./CreateQuiz.css";
 import Notification from "../../assests/Notification.png"
 import Wallet from "../../assests/Wallet.png"
 import Menu from "../../assests/Menu.png"
-import { Course, Subject, Topic } from './Utils';
-
+import { Course, Subject, Topic, Amount } from './Utils';
+import Instruction from './Utils/Instruction';
+import Question from './Utils/Question';
 const SubNav = () => {
   return(
     <div className='subNav'>
@@ -31,17 +32,6 @@ const SubNav = () => {
     </div>
     
 
-  )
-}
-const Background = () => {
-  return (
-    <div className='background'>
-      <div className='topright'></div>
-      <div className='bottomright'></div>
-      <div className='bottomright'></div>
-
-
-    </div>
   )
 }
 const QuizForm = () => {
@@ -84,6 +74,14 @@ const QuizForm = () => {
     if(!flow.subject) return;
     setcurrentFlow('topic');
   }
+  return (
+    <div className='quiz'>
+      <SubNav/>
+      <div className="popupForm">
+        <Question />
+      </div>
+    </div>
+  )
 
   return (
     <div className='quiz'>
@@ -114,37 +112,10 @@ const QuizForm = () => {
             </button>
           </div>
         </div>
-        { currentFlow==="course" && <Course  update={updateFlow} next={next} />}
+        {/* { currentFlow==="course" && <Course  update={updateFlow} next={next} />}
         { currentFlow==="subject" && <Subject update={updateFlow} next={next} />}
-        { currentFlow==="topic" && <Topic update={updateFlow} next={next} />}
-
-  
-        {/* <div className="right">
-          <div className="content">
-          <div className="amountBox">
-              <div className="amount">
-                <div className="operator" onClick={handleDecrement}>-</div>
-                <span>{entryCoins}</span>
-                <div className="operator" onClick={handleIncrement}>+</div>
-              </div>
-              <p>If you put Rs10, get 10+6=Rs16</p>
-            </div>
-            <div className="note">
-              <h3>Note</h3>
-              <ul>
-                <li>Choose your topic to create the quiz</li>
-                <li>Read the instruction and play</li>
-                <li>After completing quiz the quiz is taken by other player</li>
-                <li>The one complete quiz with highest score would win</li>
-              </ul>
-            </div>
-            
-
-          </div>
-
-          <button>Create Quiz</button>
-
-        </div> */}
+        { currentFlow==="topic" && <Topic update={updateFlow} next={next} />} */}
+        {/* <Amount/> */}
       </div>
 
     </div>
