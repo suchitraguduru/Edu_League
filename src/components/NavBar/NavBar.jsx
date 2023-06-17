@@ -11,22 +11,25 @@ export default function NavBar() {
       <div className="right">
         <ul>
         <li>
-          <NavLink to="/home" ><span>Home</span></NavLink>
+          <NavLink to="/" ><span>Home</span></NavLink>
         </li>
         <li>
-          <NavLink to="/createquiz" ><span>Create quiz</span></NavLink>
+          <a href="/#quizcreate" ><span>Create quiz</span></a>
         </li>
         <li>
-        <NavLink to="/joinquiz" ><span>Join quiz</span></NavLink>
+        <a href="#joinquiz" ><span>Join quiz</span></a>
         </li>
         <li>
-        <NavLink to="/quizseries" ><span>Quiz Series</span></NavLink>
+        <a href="#quizseries"><span>Quiz Series</span></a>
         </li>
         <li>
-        <NavLink to="/aboutus" ><span>About us</span></NavLink>
+        <a href="#quizapp" ><span>About us</span></a>
         </li>
         <li>
-        <NavLink to="/faq" ><span>FAQ</span></NavLink>
+        <a href="#faq" ><span>FAQ</span></a>
+        </li>
+        <li className='btn'>
+        <NavLink to="/login" >Login</NavLink>
         </li>
         <li className='btn'>
         <NavLink to="/signup" >Sign Up</NavLink>

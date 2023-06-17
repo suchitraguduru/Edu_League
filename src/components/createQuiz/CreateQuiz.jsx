@@ -39,14 +39,14 @@ const QuizForm = () => {
   const [selectedSubject, setSelectedSubject] = useState('');
   const [selectedTopic, setSelectedTopic] = useState('');
 
-  const [ flow, setFlow ] =  useState({course:false,subject:false,topic:false});
+  const [ flow, setFlow ] =  useState({course:false,subject:false,topic:false,amount:false,instruction:false,questions:false});
   const [ currentFlow, setcurrentFlow ] = useState('course');
   const updateFlow = (field)=>{
     setFlow((updatedFlow)=>{
       return {
         ...flow,
         [field]:true,
-      }
+      } 
     })
   }
   const next = ()=>{
@@ -62,6 +62,18 @@ const QuizForm = () => {
       setcurrentFlow('topic')
       return;
     };
+    if(!flow.amount){
+      setcurrentFlow('amount')
+      return;
+    };
+    if(!flow.instruction){
+      setcurrentFlow('instruction')
+      return; 
+    };
+    if(!flow.questions){
+      setcurrentFlow('questions')
+      return;
+    };
   }
   const updateCourseFlow = ()=>{
     setcurrentFlow('course');
@@ -74,14 +86,26 @@ const QuizForm = () => {
     if(!flow.subject) return;
     setcurrentFlow('topic');
   }
-  return (
-    <div className='quiz'>
+  if(currentFlow==="instruction"){
+    return (
+      <div className='quiz'>
       <SubNav/>
       <div className="popupForm">
-        <Question />
+        <Instruction  update={updateFlow} next={next}/>
       </div>
     </div>
-  )
+    )
+  }
+  if(currentFlow==="questions"){
+    return (
+      <div className='quiz'>
+      <SubNav/>
+      <div className="popupForm">
+        <Question update={updateFlow}  next={next}/>
+      </div>
+    </div>
+    )
+  }
 
   return (
     <div className='quiz'>
@@ -89,7 +113,7 @@ const QuizForm = () => {
       <div className="QuizForm">
 
         <div className="left">
-          <h1>QUIZ CREATION</h1>
+          <h1>QUIZ CREATION {currentFlow}</h1>
           <p>Allow users to create<br/>
           quizzes with multiple choice questions<br/>
            and choose topics they want</p>
@@ -112,10 +136,11 @@ const QuizForm = () => {
             </button>
           </div>
         </div>
-        {/* { currentFlow==="course" && <Course  update={updateFlow} next={next} />}
+        { currentFlow==="course" && <Course  update={updateFlow} next={next} />}
         { currentFlow==="subject" && <Subject update={updateFlow} next={next} />}
-        { currentFlow==="topic" && <Topic update={updateFlow} next={next} />} */}
-        {/* <Amount/> */}
+        { currentFlow==="topic" && <Topic update={updateFlow} next={next} />}
+        { currentFlow==="amount" && <Amount  update={updateFlow} next={next} />}
+        
       </div>
 
     </div>

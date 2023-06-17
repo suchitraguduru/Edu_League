@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 
 const Amount = (props) => {
-  const { update, next } = props;
+  const {  update,next } = props;
 
   const [ entryCoins, setEntryCoins ] = useState(20);
   const handleDecrement = ()=>{
-    var a = entryCoins;
-    if(a>0){
-      setEntryCoins--;
-    }
+    update('amount');
+    setEntryCoins(entryCoins-1);
   }
   const handleIncrement = ()=>{
-    var a = entryCoins;
-    setEntryCoins++;
+    update('amount');
+    setEntryCoins(entryCoins+1);
   }
   return (
       <div className='right'>

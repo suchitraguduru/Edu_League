@@ -2,9 +2,10 @@ import React from 'react';
 import "./faq.css";
 import faq from "../../assests/faq.png";
 
-const Faq = () => {
+const Faq = (props) => {
+  const {id} = props;
   return (
-    <>
+    <section id={id}>
       <div className="faq">
         <h1>FREQUENTLY ASKED QUESTIONS</h1>
         <div className="bottom">
@@ -40,7 +41,7 @@ const Faq = () => {
 
         </div>
     </div>
-    </>
+    </section>
   )
 }
 

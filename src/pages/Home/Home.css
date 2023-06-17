@@ -109,6 +109,7 @@
   width: 50%;
   font-size: 18px;
   margin-top: 8px;
+  cursor:pointer;
 }
 .joinQuiz{
   margin-top: -10rem;

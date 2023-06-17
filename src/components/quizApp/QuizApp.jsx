@@ -4,9 +4,10 @@
 import gplay from "../../assests/gplay.svg"
 import mobile from "../../assests/mobile.png"
  
- const QuizApp = () => {
+ const QuizApp = (props) => {
+  const {id} = props;
    return (
-     <>
+     <section id={id}>
         <div className="quizapp">
             <div className="container">
               <div className="left">
@@ -22,7 +23,7 @@ import mobile from "../../assests/mobile.png"
               </div>
             </div>
         </div>
-     </>
+     </section>
    )
  }
  

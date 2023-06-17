@@ -1,8 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Clock from "../../../assests/Clock.png"
 import Questions from "../../../assests/Questions.png"
 import './Instruction.css'
-const Instruction = () => {
+const Instruction = (props) => {
+  const { update, next} = props;
+  useEffect(()=>{
+    update('instruction');
+  })
   return(
     
       <div className='popup'>
@@ -39,7 +43,7 @@ const Instruction = () => {
         </div>
         <div className='bottom'>
             <button>Skip</button>
-            <button>Next</button>
+            <button onClick={next}>Next</button>
         </div>
       </div>
   

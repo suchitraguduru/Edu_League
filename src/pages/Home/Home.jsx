@@ -8,7 +8,14 @@ import joinquiz from "../../assests/joinquiz.png";
 import examBro from "../../assests/exambro.png";
 import QuizApp from "../../components/quizApp/QuizApp";
 import Faq from "../../components/faq/Faq"
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
+
+  const goto = (route)=>{
+    navigate(route);
+    return;
+  }
   return (
     <div className="home">
       <section className="banner">
@@ -24,19 +31,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="quizCreate">
+      <section className="quizCreate" id="quizcreate">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,128L80,128C160,128,320,128,480,112C640,96,800,64,960,64C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
           <div className="container">
             <img src={createquizimg} alt="" />
             <div className="content">
               <h1>QUIZ CREATION</h1>
               <p>Allow users to create <br/>quizzes with multiple choice questions and choose <br /> topics they want</p>
-              <button>Create Quiz</button>
+              <button onClick={()=>goto('/createquiz')}>Create Quiz</button>
             </div>
           </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,128L80,128C160,128,320,128,480,112C640,96,800,64,960,64C1120,64,1280,96,1360,112L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
       </section>
-      <section className="joinQuiz">
+      <section className="joinQuiz" id="joinquiz">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,128L80,128C160,128,320,128,480,112C640,96,800,64,960,64C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
         <div className="container">
           <div className="content">
@@ -48,7 +55,7 @@ export default function Home() {
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,128L80,128C160,128,320,128,480,112C640,96,800,64,960,64C1120,64,1280,96,1360,112L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
       </section>
-      <section className="quizSeries">
+      <section className="quizSeries" id="quizseries">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,128L80,128C160,128,320,128,480,112C640,96,800,64,960,64C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
           <div className="container">
             <img src={examBro} alt="" />
@@ -60,9 +67,9 @@ export default function Home() {
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,128L80,128C160,128,320,128,480,112C640,96,800,64,960,64C1120,64,1280,96,1360,112L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
       </section>
-      <Advantages/>
-      <QuizApp/>
-      <Faq/>
+      <Advantages id="advantages"/>
+      <QuizApp id="quizapp"/>
+      <Faq id="faq"/>
     </div>
   );
 }

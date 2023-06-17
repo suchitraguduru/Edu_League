@@ -3,9 +3,10 @@ import "./advantages.css";
 import left from "../../assests/left.png"
 import right from "../../assests/right.png"
 
-const Advantages = () => {
+const Advantages = (props) => {
+  const {id}=props;
   return (
-  <>
+  <section id={id}>
     <div className="advantages">
         <h1>EDU LEAGUE ADVANTAGES</h1>
         <div className="bottom">
@@ -30,7 +31,7 @@ const Advantages = () => {
 
         </div>
     </div>
-  </>
+  </section>
   )
 }
 

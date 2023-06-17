@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import './Question.css'
-const Question = () => {
+const Question = (props) => {
+
+  const { next } = props;
   return(
     <div className='question'>
       <div className='head'>
@@ -31,7 +33,7 @@ const Question = () => {
       </div>
       <div className='bottom'>
           <button>Skip</button>
-          <button>Next</button>
+          <button onClick={next} >Next</button>
       </div>
     </div>
   )
